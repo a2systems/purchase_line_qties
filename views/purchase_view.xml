@@ -1,0 +1,17 @@
+<odoo>
+
+   <record model="ir.ui.view" id="qties_purchase_order_form">
+        <field name="name">qties.purchase.order.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"></field>
+        <field name="arch" type="xml">
+		<xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="after" >
+                        <button name="btn_update_qties"
+				type="object"
+				states="purchase,done"
+                                string="Change quantities" />
+                </xpath>
+        </field>
+    </record>
+
+</odoo>

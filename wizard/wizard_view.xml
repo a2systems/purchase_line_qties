@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+      <record id="purchase_line_qties_wizard_view" model="ir.ui.view">
+            <field name="name">Purchase Order Line Qties Wizard</field>
+            <field name="model">purchase.line.qties.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update quantities received">
+                    <sheet>
+                            <group>
+                                    <field name="order_id" readonly="1"/>
+                                    <field name="line_id" readonly="1"/>
+                                    <field name="product_id" readonly="1"/>
+                                    <field name="qty_received" readonly="1"/>
+				    <field name="new_qty_received" />
+                           </group>
+                    </sheet>
+                    <footer>
+                        <button string="Confirm" name="btn_confirm" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+    </record>
+
+</odoo>
